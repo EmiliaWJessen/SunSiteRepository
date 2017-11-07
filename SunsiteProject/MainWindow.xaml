@@ -31,7 +31,7 @@
             <TextBox x:Name="userBox" Text="{Binding userName}" Grid.Row="1" Style="{StaticResource textBlock}"></TextBox>
             <Label x:Name="passwordLabel" Content="Password / 9ed347" Grid.Row="2" Style="{StaticResource label}"></Label>
             <TextBox x:Name="passwordBox" Text="{Binding userPassword}" Grid.Row="2" Style="{StaticResource textBlock}"></TextBox>
-            <Button x:Name="connectButton" Content="Conncet" Grid.Column="2" Grid.Row="3" Margin="10" Click="connectButton_Click"></Button>
+            <Button x:Name="connectButton" Content="Conncet" IsEnabled="True" Grid.Column="2" Grid.Row="3" Margin="10" Click="connectButton_Click"></Button>
             <ListView x:Name="groupsList" Background="BurlyWood" SelectionMode="Single" Margin="5" Grid.Column="2" Grid.Row="4" Grid.RowSpan="3" ItemsSource="{Binding GroupList}" SelectionChanged="groupsList_SelectionChanged">
                 <ListView.Resources>
                     <Style TargetType="{x:Type GridViewColumnHeader}">
@@ -44,7 +44,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="chooseButton" Margin="10" Content="Chose" Grid.Column="2" Grid.Row="8" Click="chooseButton_Click"></Button>
+            <Button x:Name="chooseButton" Margin="10" Content="Chose" Grid.Column="2" Grid.Row="8" Click="chooseButton_Click" Style="{StaticResource button}"></Button>
             <ListView x:Name="articlesView" Background="BurlyWood" HorizontalContentAlignment="Left" Margin="5" Grid.Row="0" Grid.RowSpan="7" ItemsSource="{Binding ArticleList}" SelectionChanged="articlesView_SelectionChanged" >
                 <ListView.Resources>
                     <Style TargetType="{x:Type GridViewColumnHeader}">
@@ -57,8 +57,8 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="readArticleButton" Margin="10" Grid.Row="8" Content="Read article" Click="readArticleButton_Click"/>
-            <Button x:Name="saveArticle" Grid.Row="8" Grid.Column="1" Content="Save article" Style="{StaticResource button}" ></Button>
+            <Button x:Name="readArticleButton" Margin="10" Grid.Row="8" Content="Read article" Click="readArticleButton_Click" Style="{StaticResource button}"/>
+            <Button x:Name="postArticle" Grid.Row="8" Grid.Column="1" Content="Post article" Style="{StaticResource button}" Click="saveArticle_Click" ></Button>
             <Border BorderThickness="5" BorderBrush="Olive" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Margin="5">
                 <ListView x:Name="article" Background="Cornsilk" HorizontalContentAlignment="Left" Grid.Row="0" Grid.RowSpan="8" ItemsSource="{Binding Articles}" SelectionChanged="articlesView_SelectionChanged" >
                     <ListView.Resources>

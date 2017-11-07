@@ -21,6 +21,7 @@
         <Style x:Key="button" TargetType="Button">
             <Setter Property="Margin" Value="10" ></Setter>
             <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="IsEnabled" Value="False"></Setter>
         </Style>
         
     </Application.Resources>

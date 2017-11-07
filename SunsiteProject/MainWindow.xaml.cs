@@ -61,16 +61,24 @@ namespace SunsiteProject
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
             WaitWindow loadingWindow = new WaitWindow();
+            //loadingWindow.Show();
+
             try
             {
-                loadingWindow.Show();
-                client.logIn();
-                loadingWindow.Close();
-                
+                client.logIn();    
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Exception : " + ex.Message);
+            }
+            finally
+            {
+                chooseButton.IsEnabled = true;
+                readArticleButton.IsEnabled = true;
+                postArticle.IsEnabled = true;
+
+                //loadingWindow.Close();
+
             }
             //client.logIn();
             /*
@@ -82,6 +90,13 @@ namespace SunsiteProject
             client.sendMessage("list " + client.enter);
             client.readStreamLine();
             */
+        }
+
+        private void saveArticle_Click(object sender, RoutedEventArgs e)
+        {
+            PostArticle postArticle = new PostArticle(client);
+            postArticle.Show();
+            
         }
     }
 }

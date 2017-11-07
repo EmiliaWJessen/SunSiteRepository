@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunsiteProject"
+        xmlns:myControls="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
-        Title="WaitWindow" Height="200" Width="250">
-    <StackPanel>
-		<Label VerticalAlignment="Center" Content="ulalala" HorizontalContentAlignment="Center"></Label>
-    </StackPanel>
+        Title="WaitWindow" Height="350" Width="350"
+        WindowStartupLocation="CenterScreen">
+ 
+    <Grid Background="Azure">
+        <myControls:WaitControl></myControls:WaitControl>
+    </Grid>
 </Window>

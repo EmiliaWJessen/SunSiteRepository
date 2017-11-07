@@ -12,7 +12,7 @@ using System.Collections.ObjectModel;
 
 namespace SunsiteProject
 {
-    class Client
+    public class Client
     {
         //Rfc977NntpClientWithExtensions test = new Rfc977NntpClientWithExtensions();
 
@@ -21,6 +21,12 @@ namespace SunsiteProject
 
         public string userName { get; set; } = "nikosxfx@gmail.com";
         public string userPassword { get; set; } = "9ed347";
+
+        public string email { get; set; } = "emil38a7@easv365.dk";
+        public string groupName { get; set; } = "dk.snak.seksualitet";
+        public string subject { get; set; } = "None";
+        public string articleText { get; set; } = "Test article";
+
 
         private string OK = "200";
 
@@ -124,6 +130,30 @@ namespace SunsiteProject
                 Articles.Add(line);
             }
             Console.WriteLine(Articles.Count);
+        }
+
+        public void uploadArticle(string email, string groupName, string subject, string articleText)
+        {
+            /*
+               post
+               From: <your email address>
+               Newsgroups: <newsgroup name (e.g., microsoft.test)>
+               Subject: <subject>
+
+               <message text>
+
+               .
+             */
+            string message = "From: <" + email + ">" + enter +
+                                "Newsgroups: " + groupName + enter +
+                                "Subject: <" + subject + ">" + enter +
+                                enter +
+                                "<" + articleText + ">" + enter +
+                                enter +
+                                enter +
+                                "." + enter;
+                           
+            sendMessage(message);
         }
 
         public void readStream()
