@@ -14,18 +14,20 @@ using System.Windows.Shapes;
 
 namespace SunsiteProject
 {
-	/// <summary>
-	/// Interaction logic for WaitWindow.xaml
-	/// </summary>
-	public partial class WaitWindow : Window
-	{
-       
-        
+    /// <summary>
+    /// Interaction logic for WaitWindow.xaml
+    /// </summary>
+    public partial class WaitWindow : Window
+    {
+
+
 
         public WaitWindow()
-		{
+        {
 
-			InitializeComponent();
-         
-	}
+            InitializeComponent();
 
+        }
+
+    }
+}
