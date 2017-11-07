@@ -19,9 +19,13 @@ namespace SunsiteProject
 	/// </summary>
 	public partial class WaitWindow : Window
 	{
-		public WaitWindow()
+       
+        
+
+        public WaitWindow()
 		{
+
 			InitializeComponent();
-		}
+         
 	}
-}
+
