@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
-        Title="Server Name" Height="450" Width="800">
+        Title="Server Name" Height="450" Width="800"
+        WindowState="Maximized">
     <Border BorderThickness="7" BorderBrush="DarkOliveGreen">
         <Grid Background="BlanchedAlmond" >
             <Grid.ColumnDefinitions>
@@ -14,14 +15,14 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
 
             </Grid.RowDefinitions>
             <!--<Label x:Name="titelLabel" Content=" Server Name" Grid.Column="1" HorizontalContentAlignment="Center" Margin="5" Grid.RowSpan="2"></Label>-->

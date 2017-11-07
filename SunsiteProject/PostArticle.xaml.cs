@@ -18,10 +18,7 @@ namespace SunsiteProject
     /// Interaction logic for PostArticle.xaml
     /// </summary>
     public partial class PostArticle : Window
-
     {
-
-
         Client client;
         public PostArticle(Client client)
         {
