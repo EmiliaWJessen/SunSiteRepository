@@ -1,0 +1,78 @@
+﻿<Window x:Class="SunsiteProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SunsiteProject"
+        mc:Ignorable="d"
+        Title="Server Name" Height="450" Width="800">
+    <Border BorderThickness="7" BorderBrush="DarkOliveGreen">
+        <Grid Background="BlanchedAlmond" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <!--<Label x:Name="titelLabel" Content=" Server Name" Grid.Column="1" HorizontalContentAlignment="Center" Margin="5" Grid.RowSpan="2"></Label>-->
+            <Label x:Name="serverNameLabel" Content="Server" Style="{StaticResource label}"></Label>
+            <TextBox x:Name="serverNameBox" Text="{Binding SERVHOST}"  Grid.Row="0" Style="{StaticResource textBlock}" ></TextBox>
+            <Label x:Name="userLabel" Content="User / nikosxfx@gmail.com" Grid.Row="1" Style="{StaticResource label}"></Label>
+            <TextBox x:Name="userBox" Text="{Binding userName}" Grid.Row="1" Style="{StaticResource textBlock}"></TextBox>
+            <Label x:Name="passwordLabel" Content="Password / 9ed347" Grid.Row="2" Style="{StaticResource label}"></Label>
+            <TextBox x:Name="passwordBox" Text="{Binding userPassword}" Grid.Row="2" Style="{StaticResource textBlock}"></TextBox>
+            <Button x:Name="connectButton" Content="Conncet" Grid.Column="2" Grid.Row="3" Margin="10" Click="connectButton_Click"></Button>
+            <ListView x:Name="groupsList" Background="BurlyWood" SelectionMode="Single" Margin="5" Grid.Column="2" Grid.Row="4" Grid.RowSpan="3" ItemsSource="{Binding GroupList}" SelectionChanged="groupsList_SelectionChanged">
+                <ListView.Resources>
+                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                        <Setter Property="HorizontalContentAlignment" Value="Left" />
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Groups"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button x:Name="chooseButton" Margin="10" Content="Chose" Grid.Column="2" Grid.Row="8" Click="chooseButton_Click"></Button>
+            <ListView x:Name="articlesView" Background="BurlyWood" HorizontalContentAlignment="Left" Margin="5" Grid.Row="0" Grid.RowSpan="7" ItemsSource="{Binding ArticleList}" SelectionChanged="articlesView_SelectionChanged" >
+                <ListView.Resources>
+                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                        <Setter Property="HorizontalContentAlignment" Value="Left" />
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Article List" Width="auto" ></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button x:Name="readArticleButton" Margin="10" Grid.Row="8" Content="Read article" Click="readArticleButton_Click"/>
+            <Button x:Name="saveArticle" Grid.Row="8" Grid.Column="1" Content="Save article" Style="{StaticResource button}" ></Button>
+            <Border BorderThickness="5" BorderBrush="Olive" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Margin="5">
+                <ListView x:Name="article" Background="Cornsilk" HorizontalContentAlignment="Left" Grid.Row="0" Grid.RowSpan="8" ItemsSource="{Binding Articles}" SelectionChanged="articlesView_SelectionChanged" >
+                    <ListView.Resources>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Article"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
