@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
-        Title="Server Name" Height="450" Width="800"
-        WindowState="Maximized">
+        Title="Server Name" Height="450" Width="800">
     <Border BorderThickness="7" BorderBrush="DarkOliveGreen">
         <Grid Background="BlanchedAlmond" >
             <Grid.ColumnDefinitions>
