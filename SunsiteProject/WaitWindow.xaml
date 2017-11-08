@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:SunsiteProject"
         xmlns:myControls="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
-        Title ="Data are loding" Height="147.143" Width="351"
+        Title ="Data are loding" Height="50" Width="351"
         WindowStartupLocation="CenterScreen">
     <Grid>
     </Grid>
