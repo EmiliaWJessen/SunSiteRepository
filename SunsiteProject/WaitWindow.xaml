@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:SunsiteProject"
         xmlns:myControls="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
-        Title="WaitWindow" Height="200" Width="250">
+        Title="WaitWindow" Height="200" Width="250" WindowStartupLocation="CenterScreen">
     <Grid>
         <fa:ImageAwesome Icon="Spinner" Spin="True" Height="100" Width="48"/>
     </Grid>
