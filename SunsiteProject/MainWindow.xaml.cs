@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -58,14 +59,24 @@ namespace SunsiteProject
             Console.WriteLine(selectedArticle);
         }
 
-        private void connectButton_Click(object sender, RoutedEventArgs e)
+        private void showApp()
         {
             WaitWindow loadingWindow = new WaitWindow();
             //loadingWindow.Show();
+            //System.Windows.Threading.Dispatcher.Run();
+        }
+
+        private void connectButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Thread  t = new Thread(showApp);
+            //t.Start();
+            WaitWindow loadingWindow = new WaitWindow();
+            loadingWindow.Show();
 
             try
             {
-                client.logIn();    
+                client.logIn();
+                loadingWindow.Close();
             }
             catch (Exception ex)
             {
@@ -76,8 +87,7 @@ namespace SunsiteProject
                 chooseButton.IsEnabled = true;
                 readArticleButton.IsEnabled = true;
                 postArticle.IsEnabled = true;
-
-                //loadingWindow.Close();
+                
 
             }
             //client.logIn();
