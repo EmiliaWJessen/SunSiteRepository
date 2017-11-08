@@ -5,6 +5,7 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SunsiteProject"
+        xmlns:myControls="clr-namespace:SunsiteProject"
         mc:Ignorable="d"
         Title="WaitWindow" Height="200" Width="250">
     <Grid>
