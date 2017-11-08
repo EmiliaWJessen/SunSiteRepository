@@ -9,6 +9,6 @@
         mc:Ignorable="d"
         Title="WaitWindow" Height="200" Width="250" WindowStartupLocation="CenterScreen">
     <Grid>
-        <fa:ImageAwesome Icon="Spinner" Spin="True" Height="100" Width="48"/>
+        <fa:ImageAwesome Icon="Spinner" Spin="True" Height="100" Width="47"/>
     </Grid>
 </Window>
