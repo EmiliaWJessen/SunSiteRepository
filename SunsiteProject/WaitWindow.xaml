@@ -10,6 +10,5 @@
         Title ="Data are loding" Height="50" Width="350"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <fa:ImageAwesome Icon="Spinner" Spin="True" Height="100" Width="48"/>
     </Grid>
 </Window>
